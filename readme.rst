@@ -1,8 +1,9 @@
 Running The Server
 
 .. code:: language-bash
+
    node server.js
-Copy
+
 
 References
 ----------
@@ -30,7 +31,7 @@ Here, Common name is BCC
      -subj '/CN=bcc' \
      -keyout ca.key \
      -out ca.crt
-   Copy
+  
 
 Generate Server Certificate
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -42,7 +43,7 @@ Generate Server Key
 
    openssl genrsa \
      -out server.key 2048
-   Copy
+   
 
 Generate CSR
 ~~~~~~~~~~~~
@@ -56,7 +57,7 @@ Here common name is localhost
      -key server.key \
      -subj '/CN=localhost' \
      -out server.csr
-   Copy
+   
 
 Generate Signed Certificate
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -71,7 +72,7 @@ Generate Signed Certificate
      -CAcreateserial \
      -days 365 \
      -out server.crt
-   Copy
+   
 
 Generate Client Certificate
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -83,7 +84,7 @@ Generate Client Key
 
    openssl genrsa \
      -out client.key 2048
-   Copy
+   
 
 .. _generate-csr-1:
 
@@ -99,7 +100,7 @@ Here common name is client's name
      -key client.key \
      -subj '/CN=torsho' \
      -out client.csr
-   Copy
+   
 
 .. _generate-signed-certificate-1:
 
@@ -116,7 +117,7 @@ Generate Signed Certificate
      -CAcreateserial \
      -days 365 \
      -out client.crt
-   Copy
+   
 
 Testing the server
 ------------------
@@ -128,5 +129,5 @@ Testing the server
      --key client.key \
      --cert client.crt \
      https://localhost:3000
-   Copy
+   
 
