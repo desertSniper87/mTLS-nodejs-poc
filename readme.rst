@@ -15,6 +15,8 @@ References
 #. Spring Boot
 #. TLS Client Authentication
 #. nodejs
+#. https://codeburst.io/mutual-tls-authentication-mtls-de-mystified-11fa2a52e9cf
+#. https://medium.com/@salarai.de/how-to-enable-mutual-tls-in-a-sprint-boot-application-77144047940f
 
 Step 1 - Generate certifcate autority using openssl
 ---------------------------------------------------
