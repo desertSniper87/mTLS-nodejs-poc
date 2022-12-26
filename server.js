@@ -14,8 +14,8 @@ const options = {
 
 const server = https.createServer(options, (req, res) => {
   res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
+  res.setHeader('Content-Type', 'text/html');
+  res.end('<html><head><title>Certificate Test</title></head><body><h1>Hello World</h1></body></html>');
 });
 
 server.listen(port, hostname, () => {
