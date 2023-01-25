@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.security.Principal;
 
-@Controller
-public class UserController {
-    @PreAuthorize("hasAuthority('ROLE_USER')")
-    @RequestMapping(value = "/user")
-    public String user(Model model, Principal principal) {
-        UserDetails currentUser = (UserDetails) ((Authentication) principal).getPrincipal();
-        model.addAttribute("username", currentUser.getUsername());
-        return "user";
-    }
-}
+//@Controller
+//public class UserController {
+//    @PreAuthorize("hasAuthority('ROLE_USER')")
+//    @RequestMapping(value = "/user")
+//    public String user(Model model, Principal principal) {
+//        UserDetails currentUser = (UserDetails) ((Authentication) principal).getPrincipal();
+//        model.addAttribute("username", currentUser.getUsername());
+//        return "user";
+//    }
+//}
